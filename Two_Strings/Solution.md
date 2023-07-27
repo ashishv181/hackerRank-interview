@@ -11,7 +11,7 @@
 ### HackerRank Discussion Solution
 
 -   In the discussion solution, the approach is to first use the string **"abcdefghijklmnopqrstuvwzyx"**.
--   Iterate over this string and for each character of the string, check if that character is present in both the strings using `**s1.getIndexOf(c)**`.
+-   Iterate over this string and for each character of the string, check if that character is present in both the strings using **`s1.getIndexOf(c)`**.
 -   If the character is absent it will return -1.
 -   If the match occurs, return **"YES"**.
 
