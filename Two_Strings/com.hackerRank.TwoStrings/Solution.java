@@ -37,6 +37,14 @@ class Result {
     return "NO";
   }
 
+  public static String discussionSolution(String s1, String s2) {
+    String flag = "NO";
+    for(char c : "abcdefghijklmnopqrstuvwxyz".toCharArray()){
+        if(s1.indexOf(c) > -1 && s2.indexOf(c) > -1)
+        flag = "YES";
+    }
+    return flag;
+  }
 }
 
 public class Solution {
@@ -45,13 +53,13 @@ public class Solution {
     BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
     int q = Integer.parseInt(bufferedReader.readLine().trim());
-    
+
     IntStream.range(0, q).forEach(qItr -> {
       try {
         String s1 = bufferedReader.readLine();
         String s2 = bufferedReader.readLine();
         String result = Result.twoStrings(s1, s2);
-
+        // String result2 = Result.discussionSolution(s1, s2);
         bufferedWriter.write(result);
         bufferedWriter.newLine();
       } catch (IOException ex) {
